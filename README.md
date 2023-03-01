@@ -1,5 +1,13 @@
 # Frameworkless / Microservice:
 
+## How Run Application
+
+`clone REPO`
+
+`php -S localhost:8000 -t public`
+
+---
+
 ## HTTP Request and Response:
 
     For HTTP Request and Response we need PSR-7 compliant package.
