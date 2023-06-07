@@ -2,9 +2,17 @@
 
 ## How Run Application
 
-`clone REPO`
+```bash
+clone REPO
+```
 
-`php -S localhost:8000 -t public`
+```bash
+composer install
+```
+
+```
+php -S localhost:8000 -t public
+```
 
 ---
 
