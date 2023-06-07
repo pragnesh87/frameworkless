@@ -10,7 +10,7 @@ git clone git@github.com:pragnesh87/frameworkless.git
 composer install
 ```
 
-```
+```bash
 php -S localhost:8000 -t public
 ```
 
