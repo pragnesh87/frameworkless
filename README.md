@@ -3,7 +3,7 @@
 ## How Run Application
 
 ```bash
-clone REPO
+git clone git@github.com:pragnesh87/frameworkless.git
 ```
 
 ```bash
