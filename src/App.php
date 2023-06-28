@@ -56,7 +56,7 @@ class App
 	private function connectDB()
 	{
 		$con = array_get($this->config, 'database.default');
-		$connection = "database.connections.${con}";
+		$connection = "database.connections." . $con;
 		$db_connection = array_get($this->config, $connection);
 
 		$this->db = new DB($db_connection);
@@ -102,8 +102,8 @@ class App
 		$this->container = new Container();
 		$this->container
 			->delegate(
-				// Auto-wiring based on constructor typehints.
-				// http://container.thephpleague.com/auto-wiring
+					// Auto-wiring based on constructor typehints.
+					// http://container.thephpleague.com/auto-wiring
 				new ReflectionContainer()
 			);
 	}
