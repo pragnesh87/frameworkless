@@ -3,11 +3,7 @@
 ## How Run Application
 
 ```bash
-git clone git@github.com:pragnesh87/frameworkless.git
-```
-
-```bash
-composer install
+clone REPO
 ```
 
 ```bash
