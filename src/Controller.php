@@ -28,4 +28,9 @@ class Controller
 	{
 		return App::$app->db->builder();
 	}
+
+	public function conn()
+	{
+		return App::$app->db->connection();
+	}
 }
