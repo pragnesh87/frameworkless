@@ -4,7 +4,7 @@ if (!function_exists('env')) {
 	function env($key, $default = '')
 	{
 		$value = $_ENV[$key];
-		if ($value === false) {
+		if (empty($value)) {
 			return $default;
 		}
 
