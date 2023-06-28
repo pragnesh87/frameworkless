@@ -2,17 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Repository\ProductRepository;
 use Core\Controller;
-use Core\DB;
 use Laminas\Diactoros\Response;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ProductController extends Controller
 {
-	/* public function __construct()
+	protected $product;
+	public function __construct()
 	{
+		$this->product = new ProductRepository($this->conn());
 		parent::__construct();
-	} */
+	}
 
 	public function index(ServerRequestInterface $request)
 	{
@@ -40,10 +42,16 @@ class ProductController extends Controller
 	{
 		$builder = $this->builder();
 		$res = $builder->select('id', 'description')
-			->from('products')
-			->where('id = 2');
+			->from('products');
 
-		$data = $res->execute()->fetch();
+		$data = $res->executeQuery()->fetchAllAssociative();
+		//$data = $res->execute()->fetchAll();
+		return $this->json($data);
+	}
+
+	public function dbalData()
+	{
+		$data = $this->product->getAll();
 		return $this->json($data);
 	}
 }
