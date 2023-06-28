@@ -26,5 +26,6 @@ $app->get('/', [ProductController::class, 'index']);
 $app->get('/data', [ProductController::class, 'data']);
 $app->get('/show', [ProductController::class, 'show']);
 $app->get('/db', [ProductController::class, 'dbData']);
+$app->get('/dbal', [ProductController::class, 'dbalData']);
 
 $app->run();
