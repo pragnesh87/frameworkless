@@ -23,4 +23,9 @@ class DB
 	{
 		return $this->conn->createQueryBuilder();
 	}
+
+	public function connection()
+	{
+		return $this->conn;
+	}
 }
