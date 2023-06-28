@@ -3,13 +3,6 @@
 return [
 	'default' => env('DB_CONNECTION', 'mysql'),
 	'connections' => [
-		'sqllite' => [
-			'driver' => 'pdo_sqlite',
-			'user' => env('DB_USERNAME', 'fwless'),
-			'password' => env('DB_PASSWORD', ''),
-			'path' => env('DB_SQLITE_PATH', 'database.sqlite3'),
-			'memory' => true, //boolean
-		],
 		'mysql' => [
 			'driver' => 'pdo_mysql',
 			'host' => env('DB_HOST', '127.0.0.1'),
@@ -17,6 +10,14 @@ return [
 			'dbname' => env('DB_DATABASE', 'fwless'),
 			'user' => env('DB_USERNAME', 'fwless'),
 			'password' => env('DB_PASSWORD', ''),
+		],
+		'sqllite' => [
+			'driver' => 'pdo_sqlite',
+			'user' => env('DB_USERNAME', 'fwless'),
+			'password' => env('DB_PASSWORD', ''),
+			//'path' => env('DB_SQLITE_PATH', 'database.sqlite3'),
+			'memory' => true,
+			//boolean
 		],
 		'pgsql' => [
 			'driver' => 'pdo_pgsql',
